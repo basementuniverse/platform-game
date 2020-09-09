@@ -1,0 +1,8 @@
+{
+	"spritePath": "content/sprites/placeholder_sprite.json",
+	"size": [12, 14],
+	"baseType": "superjump",
+	"name": "Super Jump",
+	"jumpStrength": 9,
+	"time": 5
+}

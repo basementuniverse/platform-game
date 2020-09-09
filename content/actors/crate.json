@@ -1,0 +1,10 @@
+{
+	"spritePath": "content/sprites/crate_sprite.json",
+	"size": [25, 20],
+	"baseType": "block",
+	"name": "Wooden Crate",
+	"pushable": true,
+	"heavy": true,
+	"floats": false,
+	"health": 2
+}

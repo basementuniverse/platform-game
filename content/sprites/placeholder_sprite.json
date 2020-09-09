@@ -1,0 +1,23 @@
+{
+	"imagePath": "content/sprites/placeholder.png",
+	"tileSize": [12, 14],
+	"actorOffset": [0, 0],
+	"animations": [
+		{
+			"name": "idle",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [0, 0]
+		},
+		{
+			"name": "hud",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [1, 0]
+		}
+	]
+}

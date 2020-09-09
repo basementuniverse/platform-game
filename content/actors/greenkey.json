@@ -1,0 +1,9 @@
+{
+	"spritePath": "content/sprites/greenkey_sprite.json",
+	"size": [16, 16],
+	"baseType": "inventory",
+	"name": "Green Key",
+	"stackable": true,
+	"maxCount": 3,
+	"points": 50
+}

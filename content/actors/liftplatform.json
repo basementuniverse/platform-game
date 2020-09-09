@@ -1,0 +1,6 @@
+{
+	"spritePath": "content/sprites/liftplatform_sprite.json",
+	"size": [40, 15],
+	"baseType": "platform",
+	"name": "Lift Platform"
+}

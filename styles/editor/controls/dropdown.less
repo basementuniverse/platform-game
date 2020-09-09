@@ -1,0 +1,132 @@
+@dropdownWidth:			180px;
+@dropdownMaxItems:		8;
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	width: @dropdownWidth;
+	.fadeinZIndex();
+	
+	a {
+		display: inline-block;
+		width: @dropdownWidth - 30px;
+		height: @buttonHeight - 10px;
+		padding: 5px 20px 5px 10px;
+		font: @font;
+		font-weight: bold;
+		color: @fg;
+		text-decoration: none;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		background-color: @buttonColour;
+		.transition(background-color);
+	}
+	
+	a:hover,
+	li.selected a {
+		background-color: @buttonHoverColour;
+	}
+	
+	li.noitems a,
+	li.noitems a:hover {
+		background-color: @buttonColour;
+	}
+	
+	img.dropdownicon {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		opacity: 0;
+		.transition(opacity);
+	}
+	
+	ul {
+		display: inline-block;
+		position: absolute;
+		top: @buttonHeight;
+		left: 0px;
+		width: 100%;
+		max-height: @dropdownMaxItems * @buttonHeight;
+		list-style-type: none;
+		margin: 0px;
+		background-color: @editorBg;
+		font-size: 0px;
+		border-radius: 0px 0px @editorBorderRadius @editorBorderRadius;
+		overflow-x: hidden;
+		overflow-y: auto;
+		.fadein();
+	}
+	
+	li.separator {
+		height: 0px;
+		border-top: 1px rgba(255, 255, 255, 0.5) dotted;
+	}
+	
+	li.createmap a {
+		.icon(@iconAdd);
+		padding-left: 30px;
+	}
+}
+
+.dropdown:hover {
+	.fadeoutZIndex();
+	
+	img.dropdownicon {
+		opacity: 1;
+	}
+	
+	> a {
+		background-color: @buttonHoverColour;
+	}
+	
+	ul {
+		.fadeout();
+	}
+}
+
+.dropdown.dropup {
+	float: right;
+	width: 30px;
+	
+	> a {
+		height: @statusbarHeight - 10px;
+		padding: 0px;
+		width: 30px;
+		height: @statusbarHeight;
+	}
+	
+	ul {
+		width: @dropdownWidth;
+		top: auto;
+		left: -(@dropdownWidth - 30px);
+		bottom: @statusbarHeight;
+		border-radius: @editorBorderRadius @editorBorderRadius 0px 0px;
+	}
+}
+
+.dropdown.disabled,
+.dropdown.disabled:hover,
+.dropdown.dropup.disabled,
+.dropdown.dropup.disabled:hover,
+.dropdown.dialogdisabled,
+.dropdown.dialogdisabled:hover,
+.dropdown.dropup.dialogdisabled,
+.dropdown.dropup.dialogdisabled:hover {
+	img.dropdownicon {
+		opacity: 0;
+	}
+	
+	> a {
+		opacity: 0.3;
+		background-color: @buttonColour;
+	}
+	
+	ul {
+		.fadein();
+	}
+}
+
+.toolbar .dropdown {
+	float: left;
+}

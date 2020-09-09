@@ -1,0 +1,102 @@
+@textureSelectorMaxRows:		5;
+@textureSelectorItemHeight:		45px;
+
+.dropdown.textureselector {
+	a.currentvalue {
+		position: relative;
+		padding-left: 35px;
+		width: @dropdownWidth - 55px;
+		
+		.texturepreview {
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			height: 20px;
+			width: 20px;
+			border: 1px black solid;
+			background-image: url(../images/editor/transparent.png);
+			overflow: hidden;
+			border-radius: @editorBorderRadius;
+			
+			img {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				border: none;
+				image-rendering: optimizeSpeed;
+				image-rendering: -moz-crisp-edges;
+				image-rendering: -webkit-optimize-contrast;
+				image-rendering: -o-crisp-edges; 
+				image-rendering: optimize-contrast;
+				-ms-interpolation-mode: nearest-neighbor;
+				border-radius: @editorBorderRadius;
+			}
+		}
+	}
+	
+	.textureselector {
+		display: inline-block;
+		position: absolute;
+		top: @buttonHeight;
+		left: 0px;
+		width: 100%;
+		max-height: @textureSelectorMaxRows * @textureSelectorItemHeight;
+		margin: 0px;
+		padding-bottom: 3px;
+		background-color: @colourSelectorBgColour;
+		border-radius: 0px 0px @editorBorderRadius @editorBorderRadius;
+		overflow-x: hidden;
+		overflow-y: auto;
+		.fadein();
+	}
+	
+	a.texture {
+		position: relative;
+		display: inline-block;
+		margin: 5px;
+		padding: 0px;
+		border: 1px black solid;
+		height: 30px;
+		width: 30px;
+		background-image: url(../images/editor/transparent.png);
+		overflow: hidden;
+		border-radius: @editorBorderRadius;
+		
+		img {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			border: none;
+			image-rendering: optimizeSpeed;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -webkit-optimize-contrast;
+			image-rendering: -o-crisp-edges; 
+			image-rendering: optimize-contrast;
+			-ms-interpolation-mode: nearest-neighbor;
+			border-radius: @editorBorderRadius;
+		}
+		
+		.selector {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			border-radius: @editorBorderRadius;
+		}
+	}
+	
+	a.texture:hover .selector {
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+	
+	a.texture.selected {
+		margin: 2px;
+		border: 4px black solid;
+	}
+}
+
+.dropdown:hover .textureselector {
+	.fadeout();
+}

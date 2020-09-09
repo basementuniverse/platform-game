@@ -1,0 +1,172 @@
+{
+	"name": "Test World",
+	"textureAtlases": [
+		{
+			"id": "textures1",
+			"path": "content/world/testtextures.png"
+		}
+	],
+	"backgroundImages": [
+		{
+			"id": "background1",
+			"path": "content/world/testbackground.png"
+		}
+	],
+	"startingMap": "test1",
+	"maps": [
+		{
+			"id": "test1",
+			"path": "content/world/maps/testmap1.json"
+		},
+		{
+			"id": "test2",
+			"path": "content/world/maps/testmap2.json"
+		}
+	],
+	"tileTypes": [
+		{
+			"id": 0,
+			"name": "Blank Tile",
+			"textureAtlas": "",
+			"textureOffset": null,
+			"drawFront": false,
+			"castShadow": false,
+			"friction": 0,
+			"conveyor": 0,
+			"breathable": false,
+			"ladder": false,
+			"liquid": false,
+			"solid": false,
+			"topEdge": false,
+			"bottomEdge": false,
+			"leftEdge": false,
+			"rightEdge": false
+		},
+		{
+			"id": 1,
+			"name": "tile",
+			"textureAtlas": "textures1",
+			"textureOffset": [4, 1],
+			"drawFront": false,
+			"castShadow": true,
+			"friction": 1,
+			"conveyor": 0,
+			"breathable": false,
+			"ladder": false,
+			"liquid": false,
+			"solid": true,
+			"topEdge": false,
+			"bottomEdge": false,
+			"leftEdge": false,
+			"rightEdge": false
+		},
+		{
+			"id": 2,
+			"name": "toptile",
+			"textureAtlas": "textures1",
+			"textureOffset": [1, 4],
+			"drawFront": false,
+			"castShadow": false,
+			"friction": 1,
+			"conveyor": 0,
+			"breathable": false,
+			"ladder": false,
+			"liquid": false,
+			"solid": false,
+			"topEdge": true,
+			"bottomEdge": false,
+			"leftEdge": false,
+			"rightEdge": false
+		},
+		{
+			"id": 3,
+			"name": "ice",
+			"textureAtlas": "textures1",
+			"textureOffset": [2, 4],
+			"drawFront": false,
+			"castShadow": true,
+			"friction": 0.02,
+			"conveyor": 0,
+			"breathable": false,
+			"ladder": false,
+			"liquid": false,
+			"solid": true,
+			"topEdge": false,
+			"bottomEdge": false,
+			"leftEdge": false,
+			"rightEdge": false
+		},
+		{
+			"id": 4,
+			"name": "ladder",
+			"textureAtlas": "textures1",
+			"textureOffset": [3, 1],
+			"drawFront": false,
+			"castShadow": false,
+			"friction": 1,
+			"conveyor": 0,
+			"breathable": false,
+			"ladder": true,
+			"liquid": false,
+			"solid": false,
+			"topEdge": false,
+			"bottomEdge": false,
+			"leftEdge": false,
+			"rightEdge": false
+		},
+		{
+			"id": 5,
+			"name": "conveyorbeltleft",
+			"textureAtlas": "textures1",
+			"textureOffset": [4, 0],
+			"drawFront": false,
+			"castShadow": true,
+			"friction": 1,
+			"conveyor": -100,
+			"breathable": false,
+			"ladder": false,
+			"liquid": false,
+			"solid": true,
+			"topEdge": false,
+			"bottomEdge": false,
+			"leftEdge": false,
+			"rightEdge": false
+		},
+		{
+			"id": 6,
+			"name": "conveyorbeltright",
+			"textureAtlas": "textures1",
+			"textureOffset": [0, 0],
+			"drawFront": false,
+			"castShadow": true,
+			"friction": 1,
+			"conveyor": 100,
+			"breathable": false,
+			"ladder": false,
+			"liquid": false,
+			"solid": true,
+			"topEdge": false,
+			"bottomEdge": false,
+			"leftEdge": false,
+			"rightEdge": false
+		},
+		{
+			"id": 7,
+			"name": "water",
+			"textureAtlas": "textures1",
+			"textureOffset": [1, 0],
+			"drawFront": true,
+			"castShadow": false,
+			"friction": 1,
+			"conveyor": 0,
+			"breathable": false,
+			"ladder": false,
+			"liquid": true,
+			"solid": false,
+			"topEdge": false,
+			"bottomEdge": false,
+			"leftEdge": false,
+			"rightEdge": false
+		}
+	]
+}

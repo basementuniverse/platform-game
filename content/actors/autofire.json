@@ -1,0 +1,7 @@
+{
+	"spritePath": "content/sprites/placeholder_sprite.json",
+	"size": [12, 14],
+	"baseType": "autofire",
+	"name": "Automatic Fire",
+	"time": 5
+}

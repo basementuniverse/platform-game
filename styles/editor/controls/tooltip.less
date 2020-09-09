@@ -1,0 +1,95 @@
+@tooltipBg:			rgb(0, 0, 0);
+@tooltipFg:			rgb(255, 255, 255);
+@tooltipMaxWidth:	180px;
+@tooltipArrowSize:	6px;
+@tooltipBorder:		4px;
+
+
+/* Tooltips */
+.tooltip {
+	position: absolute;
+	background-color: @tooltipBg;
+	color: @tooltipFg;
+	padding: 2px 5px 3px 5px;
+	font-size: 9pt;
+	font-weight: bold;
+	border-radius: @tooltipBorder;
+	max-width: @tooltipMaxWidth;
+	pointer-events: none;
+	z-index: 1000;
+	.user-select(none);
+	
+	.tooltip-inner {
+		position: relative;
+	}
+	
+	span {
+		font-size: 0.8em;
+		font-weight: normal;
+	}
+	
+	
+	/* Keyboard shortcut container */
+	span.keyboard-shortcut {
+		display: inline-block;
+		font-weight: normal;
+		font-style: italic;
+		font-size: 0.8em;
+		margin-left: 5px;
+	}
+}
+
+.tooltip.hidden {
+	display: none;
+}
+
+
+/* Tooltip arrows */
+.tooltip.tooltip-arrow:after {
+	content: " ";
+	position: absolute;
+	height: 0;
+	width: 0;
+	border: @tooltipArrowSize solid transparent;
+	pointer-events: none;
+}
+
+.tooltip.tooltip-arrow.tooltip-arrow-up:after {
+	bottom: 100%;
+	left: 50%;
+	margin-left: -@tooltipArrowSize;
+	border-bottom-color: @tooltipBg;
+}
+
+.tooltip.tooltip-arrow.tooltip-arrow-up.tooltip-arrow-up-left:after		{ left: 10px; }
+.tooltip.tooltip-arrow.tooltip-arrow-up.tooltip-arrow-up-right:after	{ left: auto; right: 10px; }
+
+.tooltip.tooltip-arrow.tooltip-arrow-down:after {
+	top: 100%;
+	left: 50%;
+	margin-left: -@tooltipArrowSize;
+	border-top-color: @tooltipBg;
+}
+
+.tooltip.tooltip-arrow.tooltip-arrow-down.tooltip-arrow-down-left:after		{ left: 10px; }
+.tooltip.tooltip-arrow.tooltip-arrow-down.tooltip-arrow-down-right:after	{ left: auto; right: 10px; }
+
+.tooltip.tooltip-arrow.tooltip-arrow-left:after {
+	top: 50%;
+	right: 100%;
+	margin-top: -@tooltipArrowSize;
+	border-right-color: @tooltipBg;
+}
+
+.tooltip.tooltip-arrow.tooltip-arrow-left.tooltip-arrow-left-top:after		{ top: 10px; }
+.tooltip.tooltip-arrow.tooltip-arrow-left.tooltip-arrow-left-bottom:after	{ top: auto; bottom: 10px; }
+
+.tooltip.tooltip-arrow.tooltip-arrow-right:after {
+	top: 50%;
+	left: 100%;
+	margin-top: -@tooltipArrowSize;
+	border-left-color: @tooltipBg;
+}
+
+.tooltip.tooltip-arrow.tooltip-arrow-right.tooltip-arrow-right-top:after	{ top: 10px; }
+.tooltip.tooltip-arrow.tooltip-arrow-right.tooltip-arrow-right-bottom:after	{ top: auto; bottom: 10px; }

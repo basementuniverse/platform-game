@@ -1,0 +1,115 @@
+{
+	"imagePath": "content/sprites/player.png",
+	"tileSize": [30, 30],
+	"actorOffset": [-7, -3],
+	"animations": [
+		{
+			"name": "idle",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": true,
+			"startOffset": [0, 0],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "jump",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": true,
+			"startOffset": [1, 0],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "die",
+			"frames": 2,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [2, 0],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "walk",
+			"frames": 4,
+			"frameRate": 14,
+			"loop": true,
+			"directions": true,
+			"startOffset": [0, 1],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "climbidle",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [0, 2],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "climb",
+			"frames": 2,
+			"frameRate": 14,
+			"loop": true,
+			"directions": false,
+			"startOffset": [1, 2],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "fall",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": true,
+			"startOffset": [3, 2],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "fly",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": true,
+			"startOffset": [0, 3],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "swimidle",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": true,
+			"startOffset": [1, 3],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "swim",
+			"frames": 2,
+			"frameRate": 14,
+			"loop": true,
+			"directions": true,
+			"startOffset": [2, 3],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "crouch",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": true,
+			"startOffset": [0, 4],
+			"barrelOffset": [23, 10]
+		},
+		{
+			"name": "crawl",
+			"frames": 3,
+			"frameRate": 14,
+			"loop": true,
+			"directions": true,
+			"startOffset": [1, 4],
+			"barrelOffset": [23, 10]
+		}
+	]
+}

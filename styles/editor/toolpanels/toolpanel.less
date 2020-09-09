@@ -1,0 +1,83 @@
+@toolpanelWidth:				240px;
+@toolpanelMinWidth:				220px;
+@toolpanelResizeWidth:			10px;
+@toolpanelBg:					rgba(100, 100, 100, 0.95);
+@toolpanelResizeColour:			rgba(255, 255, 255, 0);
+@toolpanelResizeHoverColour:	rgba(255, 255, 255, 0.3);
+
+.toolpanel {
+	position: absolute;
+	top: @toolbarHeight;
+	bottom: @statusbarHeight;
+	right: 0px;
+	width: @toolpanelWidth;
+	min-width: @toolpanelMinWidth;
+	background-color: @toolpanelBg;
+	z-index: 2;
+	.fadein();
+	
+	.resize {
+		display: inline-block;
+		position: absolute;
+		height: 100%;
+		width: @toolpanelResizeWidth;
+		background-image: url(../images/editor/resizex.png);
+		background-repeat: no-repeat;
+		background-position: -5px center;
+		cursor: col-resize;
+		background-color: @toolpanelResizeColour;
+		.transition(background-color);
+	}
+	
+	.resize:hover,
+	.resize.active {
+		background-color: @toolpanelResizeHoverColour;
+	}
+	
+	.toolpanelcontent {
+		display: inline-block;
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: @toolpanelResizeWidth;
+		right: 0px;
+		padding: 10px;
+		.fadein();
+	}
+}
+
+div.editor.showtoolpanel {
+	.toolpanel {
+		.fadeout();
+	}
+	
+	.toolpanel.disabled,
+	.toolpanel.dialogdisabled {
+		.fadein();
+	}
+	
+	.button.toolpanelbutton {
+		.icon(@iconToolPanelOff);
+	}
+}
+
+div.editor.showtoolpanel.selecttool,
+div.editor.showtoolpanel.movecameratool {
+	.toolpanelcontent.itemlist {
+		.fadeout();
+	}
+}
+
+div.editor.showtoolpanel.itemselected.showitemproperties {
+	.toolpanelcontent.itemlist {
+		.fadein();
+	}
+	
+	.toolpanelcontent.selecteditem {
+		.fadeout();
+	}
+}
+
+div.editor.showtoolpanel.tiletool .toolpanelcontent.tiletypes {
+	.fadeout();
+}

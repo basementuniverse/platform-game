@@ -1,0 +1,6 @@
+{
+	"spritePath": "content/sprites/particle1_sprite.json",
+	"size": [10, 10],
+	"baseType": "particle",
+	"name": "Star Particle"
+}

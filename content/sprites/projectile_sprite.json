@@ -1,0 +1,23 @@
+{
+	"imagePath": "content/sprites/projectile.png",
+	"tileSize": [10, 7],
+	"actorOffset": [0, -2],
+	"animations": [
+		{
+			"name": "idle",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": true,
+			"startOffset": [0, 0]
+		},
+		{
+			"name": "power",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": true,
+			"startOffset": [1, 0]
+		}
+	]
+}

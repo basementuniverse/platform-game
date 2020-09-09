@@ -1,0 +1,23 @@
+{
+	"imagePath": "content/sprites/door.png",
+	"tileSize": [20, 35],
+	"actorOffset": [0, 0],
+	"animations": [
+		{
+			"name": "idle",
+			"frames": 4,
+			"frameRate": 4,
+			"loop": false,
+			"directions": false,
+			"startOffset": [0, 0]
+		},
+		{
+			"name": "active",
+			"frames": 4,
+			"frameRate": 4,
+			"loop": false,
+			"directions": false,
+			"startOffset": [0, 1]
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"spritePath": "content/sprites/redkey_sprite.json",
+	"size": [16, 16],
+	"baseType": "inventory",
+	"name": "Red Key",
+	"stackable": false,
+	"maxCount": 0
+}

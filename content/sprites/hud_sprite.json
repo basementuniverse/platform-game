@@ -1,0 +1,31 @@
+{
+	"imagePath": "content/sprites/hud.png",
+	"tileSize": [10, 10],
+	"actorOffset": [0, 0],
+	"animations": [
+		{
+			"name": "health",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [0, 0]
+		},
+		{
+			"name": "oxygen",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [1, 0]
+		},
+		{
+			"name": "oxygen_depleted",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [2, 0]
+		}
+	]
+}

@@ -1,0 +1,169 @@
+{
+	"items": [
+		{
+			"id": "intro",
+			"loader": "image",
+			"args": ["content/intro.png"]
+		},
+		{
+			"id": "mainmenu",
+			"loader": "image",
+			"args": ["content/menu.png"]
+		},
+		{
+			"id": "error",
+			"loader": "image",
+			"args": ["content/error.png"]
+		},
+		{
+			"id": "controls",
+			"loader": "data",
+			"args": ["content/controls.json"]
+		},
+		{
+			"id": "world",
+			"loader": "world",
+			"args": ["api/v1.0/worlds/{{WORLD_ID}}/data", "{{WORLD_DATA}}"]
+		},
+		{
+			"id": "player",
+			"loader": "actor",
+			"args": ["content/actors/player.json"]
+		},
+		{
+			"id": "hud",
+			"loader": "sprite",
+			"args": ["content/sprites/hud_sprite.json"]
+		},
+		{
+			"id": "player_projectile",
+			"loader": "actor",
+			"args": ["content/actors/player_projectile.json"]
+		},
+		{
+			"id": "crate",
+			"loader": "actor",
+			"args": ["content/actors/crate.json"]
+		},
+		{
+			"id": "barrel",
+			"loader": "actor",
+			"args": ["content/actors/barrel.json"]
+		},
+		{
+			"id": "liftplatform",
+			"loader": "actor",
+			"args": ["content/actors/liftplatform.json"]
+		},
+		{
+			"id": "switch",
+			"loader": "actor",
+			"args": ["content/actors/switch.json"]
+		},
+		{
+			"id": "mapdoor",
+			"loader": "actor",
+			"args": ["content/actors/mapdoor.json"]
+		},
+		{
+			"id": "door",
+			"loader": "actor",
+			"args": ["content/actors/door.json"]
+		},
+		{
+			"id": "autofire",
+			"loader": "actor",
+			"args": ["content/actors/autofire.json"]
+		},
+		{
+			"id": "badhealth",
+			"loader": "actor",
+			"args": ["content/actors/badhealth.json"]
+		},
+		{
+			"id": "greenkey",
+			"loader": "actor",
+			"args": ["content/actors/greenkey.json"]
+		},
+		{
+			"id": "health",
+			"loader": "actor",
+			"args": ["content/actors/health.json"]
+		},
+		{
+			"id": "invisibility",
+			"loader": "actor",
+			"args": ["content/actors/invisibility.json"]
+		},
+		{
+			"id": "invulnerability",
+			"loader": "actor",
+			"args": ["content/actors/invulnerability.json"]
+		},
+		{
+			"id": "jetpack",
+			"loader": "actor",
+			"args": ["content/actors/jetpack.json"]
+		},
+		{
+			"id": "jetpack_permanent",
+			"loader": "actor",
+			"args": ["content/actors/jetpack_permanent.json"]
+		},
+		{
+			"id": "points",
+			"loader": "actor",
+			"args": ["content/actors/points.json"]
+		},
+		{
+			"id": "powerattack",
+			"loader": "actor",
+			"args": ["content/actors/powerattack.json"]
+		},
+		{
+			"id": "redkey",
+			"loader": "actor",
+			"args": ["content/actors/redkey.json"]
+		},
+		{
+			"id": "superhealth",
+			"loader": "actor",
+			"args": ["content/actors/superhealth.json"]
+		},
+		{
+			"id": "superjump",
+			"loader": "actor",
+			"args": ["content/actors/superjump.json"]
+		},
+		{
+			"id": "superspeed",
+			"loader": "actor",
+			"args": ["content/actors/superspeed.json"]
+		},
+		{
+			"id": "rebreather",
+			"loader": "actor",
+			"args": ["content/actors/rebreather.json"]
+		},
+		{
+			"id": "particle1",
+			"loader": "actor",
+			"args": ["content/actors/particle1.json"]
+		},
+		{
+			"id": "particle2",
+			"loader": "actor",
+			"args": ["content/actors/particle2.json"]
+		},
+		{
+			"id": "character1",
+			"loader": "actor",
+			"args": ["content/actors/character1.json"]
+		},
+		{
+			"id": "character1_projectile",
+			"loader": "actor",
+			"args": ["content/actors/character1_projectile.json"]
+		}
+	]
+}

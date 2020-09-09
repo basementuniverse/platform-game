@@ -1,0 +1,61 @@
+{
+	"imagePath": "content/sprites/character1.png",
+	"tileSize": [30, 30],
+	"actorOffset": [-7, -3],
+	"animations": [
+		{
+			"name": "idle",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": true,
+			"startOffset": [0, 0],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "jump",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": true,
+			"startOffset": [1, 0],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "die",
+			"frames": 2,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [2, 0],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "walk",
+			"frames": 4,
+			"frameRate": 14,
+			"loop": true,
+			"directions": true,
+			"startOffset": [0, 1],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "fall",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": true,
+			"startOffset": [0, 2],
+			"barrelOffset": [23, 15]
+		},
+		{
+			"name": "fire",
+			"frames": 3,
+			"frameRate": 14,
+			"loop": true,
+			"directions": true,
+			"startOffset": [1, 2],
+			"barrelOffset": [23, 15]
+		}
+	]
+}

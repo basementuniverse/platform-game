@@ -1,0 +1,141 @@
+{
+	"spritePath": "content/sprites/character1_sprite.json",
+	"size": [16, 24],
+	"baseType": "character",
+	"name": "Test Character",
+	"health": 3,
+	"maxHealth": 3,
+	"damageInvulnerableTime": 1,
+	"flying": false,
+	"rateOfFire": 0.1,
+	"oxygen": 3,
+	"maxOxygen": 3,
+	"breatheRate": 2,
+	"visionType": 3,
+	"invisible": false,
+	"invulnerable": false,
+	"powerAttack": false,
+	"regenerateHealth": false,
+	"projectileType": "character1_projectile",
+	"speed": 50,
+	"maxSpeed": 100,
+	"jumpStrength": 6.5,
+	"waterBreathing": true,
+	"touchDamage": 0,
+	"touchKill": false,
+	"events": {
+		"activate": "sayhello",
+		"playervisible": "attack",
+		"damage": "ouch"
+	},
+	"states": [
+		{
+			"id": "idle",
+			"actions": [
+				{
+					"id": "idle",
+					"time": 2
+				},
+				{
+					"id": "faceOpposite"
+				},
+				{
+					"id": "restartState"
+				}
+			]
+		},
+		{
+			"id": "sayhello",
+			"powerAttack": true,
+			"actions": [
+				{
+					"id": "say",
+					"message": "Hello, player!"
+				},
+				{
+					"id": "waitRandom",
+					"min": 1,
+					"max": 3
+				},
+				{
+					"id": "say",
+					"message": "I can see you..."
+				},
+				{
+					"id": "idle",
+					"time": 0.5
+				},
+				{
+					"id": "faceDirection",
+					"direction": "left"
+				},
+				{
+					"id": "fire",
+					"time": 0.1
+				},
+				{
+					"id": "idle",
+					"time": 2
+				},
+				{
+					"id": "changeState",
+					"state": "idle"
+				}
+			]
+		},
+		{
+			"id": "attack",
+			"actions": [
+				{
+					"id": "facePlayer"
+				},
+				{
+					"id": "move",
+					"time": 0.5
+				},
+				{
+					"id": "fire",
+					"time": 1
+				},
+				{
+					"id": "faceOpposite"
+				},
+				{
+					"id": "move",
+					"time": 1
+				},
+				{
+					"id": "animate",
+					"animation": "fire",
+					"time": 2
+				},
+				{
+					"id": "changeState",
+					"state": "idle"
+				}
+			]
+		},
+		{
+			"id": "ouch",
+			"actions": [
+				{
+					"id": "jump"
+				},
+				{
+					"id": "facePlayer"
+				},
+				{
+					"id": "faceOpposite"
+				},
+				{
+					"id": "move",
+					"time": 0.5
+				},
+				{
+					"id": "changeState",
+					"state": "idle"
+				}
+			]
+		}
+	]
+}

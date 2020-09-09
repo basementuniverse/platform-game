@@ -1,0 +1,26 @@
+{
+	"name": "Untitled World",
+	"textureAtlases": [],
+	"backgroundImages": [],
+	"startingMap": "",
+	"maps": [],
+	"tileTypes": [
+		{
+			"id": 0,
+			"name": "Blank Tile",
+			"textureAtlas": "",
+			"textureOffset": null,
+			"drawFront": false,
+			"castShadow": false,
+			"friction": 0,
+			"conveyor": 0,
+			"ladder": false,
+			"liquid": false,
+			"solid": false,
+			"topEdge": false,
+			"bottomEdge": false,
+			"leftEdge": false,
+			"rightEdge": false
+		}
+	]
+}

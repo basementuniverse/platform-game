@@ -1,0 +1,7 @@
+{
+	"spritePath": "content/sprites/invisibility_sprite.json",
+	"size": [20, 30],
+	"baseType": "invisible",
+	"name": "Invisibility",
+	"time": 5
+}

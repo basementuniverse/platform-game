@@ -1,0 +1,300 @@
+{
+	"name": "Test Map #1",
+	"size": [20, 20],
+	"playerStartingPosition": [50, -60],
+	"persistent": true,
+	"tiles": [
+		0,4,[2,1],[12,0],[2,7],[2,0],[2,4],0,1,[12,0],[2,7],0,2,[2,4],0,1,[6,7],1,[8,0],2,4,[2,0],
+		1,[6,7],1,[8,0],2,4,[2,0],[8,1],[8,0],2,4,[4,0],[4,1],[10,0],2,4,[18,0],2,4,[16,0],1,0,
+		2,4,[8,0],[3,1],[5,3],1,0,2,4,[6,0],2,[5,0],4,[5,0],2,[13,0],4,[5,0],2,[2,0],1,0,1,0,2,
+		[6,0],4,[3,0],1,0,1,[13,0],4,1,[4,0],1,4,[6,0],1,[5,0],4,[5,0],1,4,[2,1],[5,0],1,[3,0],
+		[2,2],[5,0],1,4,[10,0],[3,1],[5,0],1,4,[2,0],[4,2],[9,0],1,2,0,1,4,[8,0],1,[6,0],1,0,2,
+		1,[6,0],1,[2,0],1,[6,0],1,[2,0],1,[2,6],[2,5],[7,1],[2,3],1,3,[5,1]
+	],
+	"background": {
+		"colour": "rgba(214, 226, 184, 1)",
+		"offset": [0, 0],
+		"backgroundImageId": "background1",
+		"repeatX": true,
+		"repeatY": true,
+		"parallax": [0.2, 0]
+	},
+	"actors": [
+		{
+			"type": "invulnerability",
+			"id": "p0",
+			"position": [260, -20]
+		},
+		{
+			"type": "greenkey",
+			"id": "p1",
+			"position": [290, -20]
+		},
+		{
+			"type": "greenkey",
+			"id": "p2",
+			"position": [280, -20]
+		},
+		{
+			"type": "rebreather",
+			"id": "p3",
+			"position": [190, -20]
+		},
+		{
+			"type": "autofire",
+			"id": "p4",
+			"position": [350, -20],
+			"time": 0
+		},
+		{
+			"type": "crate",
+			"id": "crate1",
+			"position": [290, -40]
+		},
+		{
+			"type": "barrel",
+			"id": "barrel1",
+			"position": [170, -40]
+		},
+		{
+			"type": "liftplatform",
+			"id": "lift1",
+			"position": [300, 40],
+			"active": true,
+			"wayPoints": [
+				{ "target": [300, 0], "time": 6 },
+				{ "target": [100, 0], "time": 6 }
+			]
+		},
+		{
+			"type": "switch",
+			"id": "switch1",
+			"position": [75, -25],
+			"active": true
+		},
+		{
+			"type": "door",
+			"id": "door1",
+			"position": [230, 125]
+		}
+	],
+	"entities": [
+		{
+			"type": "use",
+			"id": "lift1switch",
+			"position": [70, -30],
+			"size": [20, 20]
+		},
+		{
+			"type": "latch",
+			"id": "lift1latch",
+			"position": [70, -60],
+			"toggle": true,
+			"inputs": [
+				"lift1switch"
+			]
+		},
+		{
+			"type": "nand",
+			"id": "lift1nand",
+			"position": [100, -90],
+			"inputs": [
+				"lift1latch"
+			]
+		},
+		{
+			"type": "actorstate",
+			"id": "actorstate1",
+			"position": [180, -70],
+			"actorId": "lift1",
+			"inputs": [
+				"lift1nand"
+			]
+		},
+		{
+			"type": "actorstate",
+			"id": "actorstate2",
+			"position": [120, -50],
+			"actorId": "switch1",
+			"inputs": [
+				"lift1nand"
+			]
+		},
+		{
+			"type": "actorstate",
+			"id": "actorstate3",
+			"position": [160, 130],
+			"actorId": "door1",
+			"inputs": [
+				"lift1nand"
+			]
+		},
+		{
+			"type": "lightstate",
+			"id": "lightstate1",
+			"position": [-100, -100],
+			"lightId": "light1",
+			"inputs": [
+				"lift1nand"
+			]
+		},
+		{
+			"type": "collision",
+			"id": "collision1",
+			"position": [160, 320],
+			"size": [60, 60],
+			"filterType": "player"
+		},
+		{
+			"type": "maptransition",
+			"id": "maptransition1",
+			"position": [190, 290],
+			"mapId": "test2",
+			"targetId": "",
+			"inputs": [
+				"collision1"
+			]
+		},
+		{
+			"type": "particle",
+			"id": "emitter1",
+			"position": [60, -100],
+			"size": [40, 40],
+			"continuous": true,
+			"particleType": "particle1",
+			"rate": 4,
+			"chance": 1,
+			"amount": [1, 1],
+			"speed": [1, 1],
+			"angle": [0, 0],
+			"alpha": [0.2, 1],
+			"timeout": [1, 4],
+			"compositeMode": "",
+			"useGravity": true,
+			"collide": false,
+			"pathModifiers": [
+				{
+					"id": "floating",
+					"amount": 0.9
+				},
+				{
+					"id": "oscillate",
+					"rate": 1,
+					"amount": [0.2, 0]
+				}
+			],
+			"inputs": [
+				"lift1nand"
+			]
+		},
+		{
+			"type": "particle",
+			"id": "emitter2",
+			"position": [-30, -130],
+			"size": [10, 10],
+			"continuous": true,
+			"particleType": "particle2",
+			"rate": 0.05,
+			"chance": 0.6,
+			"amount": [1, 6],
+			"speed": [2, 8],
+			"angle": [-45, 45],
+			"alpha": [0.5, 1],
+			"timeout": [1, 4],
+			"compositeMode": "lighter",
+			"useGravity": true,
+			"collide": true,
+			"pathModifiers": [
+				{
+					"id": "floating",
+					"amount": 0.6
+				},
+				{
+					"id": "wind",
+					"amount": [-2, 0]
+				}
+			]
+		}
+	],
+	"lights": [
+		{
+			"type": "point",
+			"id": "light1",
+			"position": [0, 0],
+			"brightness": 1,
+			"colour": "white",
+			"castShadows": true,
+			"active": true,
+			"size": 200,
+			"actorId": "lift1"
+		},
+		{
+			"type": "point",
+			"id": "light2",
+			"position": [120, -30],
+			"brightness": 0.5,
+			"colour": "red",
+			"castShadows": true,
+			"active": true,
+			"size": 80
+		},
+		{
+			"type": "ambient",
+			"id": "light3",
+			"direction": [0, 0],
+			"brightness": 0.4,
+			"colour": "white",
+			"castShadows": false,
+			"active": true
+		},
+		{
+			"type": "ambient",
+			"id": "light4",
+			"direction": [1, 1],
+			"brightness": 0.4,
+			"colour": "rgb(200, 255, 80)",
+			"castShadows": true,
+			"active": true,
+			"animations": [
+				{
+					"type": "flash",
+					"rate": 2,
+					"chance": 0.2,
+					"flashTime": [0.05, 0.2],
+					"amount": [0.2, 1],
+					"colour": "white"
+				}
+			]
+		},
+		{
+			"type": "ambient",
+			"id": "light5",
+			"direction": [-1, 1],
+			"brightness": 0.4,
+			"colour": "blue",
+			"castShadows": true,
+			"active": true
+		},
+		{
+			"type": "spot",
+			"id": "light6",
+			"position": [60, -50],
+			"direction": [0, 1],
+			"size": 90,
+			"beamWidth": 90,
+			"brightness": 1,
+			"colour": "yellow",
+			"castShadows": true,
+			"active": true,
+			"animations": [
+				{
+					"type": "rotate",
+					"speed": 30,
+					"startAngle": 30,
+					"endAngle": 150,
+					"reverse": true
+				}
+			]
+		}
+	]
+}

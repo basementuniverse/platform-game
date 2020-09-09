@@ -1,0 +1,8 @@
+{
+	"spritePath": "content/sprites/projectile_sprite.json",
+	"name": "Bullet",
+	"size": [10, 3],
+	"speed": 200,
+	"damage": 1,
+	"powerDamage": 2
+}

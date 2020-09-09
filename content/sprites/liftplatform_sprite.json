@@ -1,0 +1,23 @@
+{
+	"imagePath": "content/sprites/liftplatform.png",
+	"tileSize": [40, 15],
+	"actorOffset": [0, 0],
+	"animations": [
+		{
+			"name": "idle",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [0, 0]
+		},
+		{
+			"name": "active",
+			"frames": 2,
+			"frameRate": 2,
+			"loop": true,
+			"directions": false,
+			"startOffset": [1, 0]
+		}
+	]
+}

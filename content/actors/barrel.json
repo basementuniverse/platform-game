@@ -1,0 +1,10 @@
+{
+	"spritePath": "content/sprites/barrel_sprite.json",
+	"size": [18, 20],
+	"baseType": "block",
+	"name": "Barrel",
+	"pushable": true,
+	"heavy": false,
+	"floats": true,
+	"health": 0
+}

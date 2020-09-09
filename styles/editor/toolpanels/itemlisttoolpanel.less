@@ -1,0 +1,192 @@
+.toolpanelcontent.itemlist {
+	@itemButtonSize:	32px;
+	
+	.itembuttons {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	
+	a.itembutton {
+		position: relative;
+		display: inline-block;
+		margin: 5px;
+		height: @itemButtonSize;
+		width: @itemButtonSize;
+		background-color: transparent;
+		border-radius: @editorBorderRadius;
+		z-index: 1;
+		.transition(background-color);
+		
+		.imagecontainer {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			
+			img {
+				position: absolute;
+				border: none;
+				image-rendering: optimizeSpeed;
+				image-rendering: -moz-crisp-edges;
+				image-rendering: -webkit-optimize-contrast;
+				image-rendering: -o-crisp-edges; 
+				image-rendering: optimize-contrast;
+				-ms-interpolation-mode: nearest-neighbor;
+			}
+		}
+		
+		.editindicator {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			border-radius: @editorBorderRadius;
+			background-color: @toolpanelBg;
+			opacity: 0;
+			.transition(opacity);
+			.icon(@iconRightArrow);
+		}
+	}
+	
+	a.itembutton:hover,
+	a.itembutton.selected {
+		background-color: @buttonHoverColour;
+	}
+	
+	a.itembutton.selected:hover .editindicator {
+		opacity: 0.8;
+	}
+	
+	a.itembutton.additembutton {
+		background-color: @editorBg;
+		.icon(@iconAdd, 1px, 1px);
+	}
+	
+	a.itembutton.additembutton:hover {
+		background-color: @buttonHoverColour;
+	}
+	
+	a.itembutton.entitybutton.type_actorstate {
+		.entityIcon(@entityIconActorStateTrigger);
+	}
+	
+	a.itembutton.entitybutton.type_actorspawn {
+		.entityIcon(@entityIconActorSpawnTrigger);
+	}
+	
+	a.itembutton.entitybutton.type_actorhealth {
+		.entityIcon(@entityIconActorHealthTrigger);
+	}
+	
+	a.itembutton.entitybutton.type_camerashake {
+		.entityIcon(@entityIconCameraShakeTrigger);
+	}
+	
+	a.itembutton.entitybutton.type_cameratarget {
+		.entityIcon(@entityIconCameraTargetTrigger);
+	}
+	
+	a.itembutton.entitybutton.type_caption {
+		.entityIcon(@entityIconCaptionTrigger);
+	}
+	
+	a.itembutton.entitybutton.type_collision {
+		.entityIcon(@entityIconCollisionMarker);
+	}
+	
+	a.itembutton.entitybutton.type_counter {
+		.entityIcon(@entityIconCounter);
+	}
+	
+	a.itembutton.entitybutton.type_damage {
+		.entityIcon(@entityIconDamageMarker);
+	}
+	
+	a.itembutton.entitybutton.type_delay {
+		.entityIcon(@entityIconDelay);
+	}
+	
+	a.itembutton.entitybutton.type_force {
+		.entityIcon(@entityIconForceMarker);
+	}
+	
+	a.itembutton.entitybutton.type_global {
+		.entityIcon(@entityIconGlobalFlagTrigger);
+	}
+	
+	a.itembutton.entitybutton.type_inventory {
+		.entityIcon(@entityIconInventoryMarker);
+	}
+	
+	a.itembutton.entitybutton.type_jump {
+		.entityIcon(@entityIconJumpMarker);
+	}
+	
+	a.itembutton.entitybutton.type_latch {
+		.entityIcon(@entityIconLatch);
+	}
+	
+	a.itembutton.entitybutton.type_lightstate {
+		.entityIcon(@entityIconLightStateTrigger);
+	}
+	
+	a.itembutton.entitybutton.type_maptransition {
+		.entityIcon(@entityIconMapTransitionTrigger);
+	}
+	
+	a.itembutton.entitybutton.type_move {
+		.entityIcon(@entityIconMoveMarker);
+	}
+	
+	a.itembutton.entitybutton.type_nand {
+		.entityIcon(@entityIconNandGate);
+	}
+	
+	a.itembutton.entitybutton.type_or {
+		.entityIcon(@entityIconOrGate);
+	}
+	
+	a.itembutton.entitybutton.type_particle {
+		.entityIcon(@entityIconParticleEmitterTrigger);
+	}
+	
+	a.itembutton.entitybutton.type_powerup {
+		.entityIcon(@entityIconPowerupMarker);
+	}
+	
+	a.itembutton.entitybutton.type_sound {
+		.entityIcon(@entityIconSoundTrigger);
+	}
+	
+	a.itembutton.entitybutton.type_timer {
+		.entityIcon(@entityIconTimer);
+	}
+	
+	a.itembutton.entitybutton.type_use {
+		.entityIcon(@entityIconUseMarker);
+	}
+	
+	a.itembutton.lightbutton.type_point {
+		.entityIcon(@entityIconPointLight);
+	}
+	
+	a.itembutton.lightbutton.type_spot {
+		.entityIcon(@entityIconSpotLight);
+	}
+	
+	a.itembutton.lightbutton.type_ambient {
+		.entityIcon(@entityIconAmbientLight);
+	}
+	
+	a.itembutton.entitybutton.type_playerstart {
+		.entityIcon(@entityIconPlayerStart);
+	}
+}

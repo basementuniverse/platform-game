@@ -1,0 +1,31 @@
+{
+	"imagePath": "content/sprites/crate.png",
+	"tileSize": [25, 20],
+	"actorOffset": [0, 0],
+	"animations": [
+		{
+			"name": "idle",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [0, 0]
+		},
+		{
+			"name": "damaged",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [1, 0]
+		},
+		{
+			"name": "destroy",
+			"frames": 3,
+			"frameRate": 4,
+			"loop": false,
+			"directions": false,
+			"startOffset": [2, 0]
+		}
+	]
+}

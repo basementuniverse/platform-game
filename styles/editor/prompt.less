@@ -1,0 +1,61 @@
+@promptBg:		rgba(50, 50, 50, 0.9);
+
+.prompt {
+	.attachedToScreen();
+	background-color: @promptBg;
+	z-index: 90;
+	opacity: 0.01;
+	.transition(opacity);
+	
+	.message {
+		text-align: center;
+		position: relative;
+		top: 30%;
+		max-width: 300px;
+		margin: 10px auto;
+	}
+	
+	.buttons {
+		margin-top: 20px;
+		text-align: center;
+	}
+	
+	.button {
+		float: none;
+		display: inline-block;
+		padding: 5px;
+		min-width: 100px;
+		background-image: none;
+		background-color: @dialogButtonColour;
+		.transition(background-color);
+		color: @fg;
+		height: 20px;
+		text-decoration: none;
+		font-weight: bold;
+		text-align: center;
+		margin: 0px 5px 0px 5px;
+		border-radius: @editorBorderRadius;
+	}
+	
+	.button:hover {
+		background-color: @dialogButtonHoverColour;
+	}
+	
+	.button.okbutton {
+		text-align: left;
+		padding-left: 30px;
+		min-width: 70px;
+		.icon(@iconTick);
+	}
+	
+	.button.cancelbutton {
+		text-align: left;
+		padding-left: 30px;
+		min-width: 70px;
+		.icon(@iconCross);
+	}
+}
+
+.prompt.show {
+	opacity: 1;
+}

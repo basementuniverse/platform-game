@@ -1,0 +1,6 @@
+{
+	"spritePath": "content/sprites/switch_sprite.json",
+	"size": [10, 10],
+	"baseType": "decoration",
+	"name": "Switch"
+}

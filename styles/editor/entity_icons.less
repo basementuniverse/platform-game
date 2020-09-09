@@ -1,0 +1,38 @@
+@entityIconHeight:					30px;
+
+@entityIconActorStateTrigger:		0;
+@entityIconActorSpawnTrigger:		1;
+@entityIconActorHealthTrigger:		2;
+@entityIconCameraShakeTrigger:		3;
+@entityIconCameraTargetTrigger:		4;
+@entityIconCaptionTrigger:			5;
+@entityIconCollisionMarker:			6;
+@entityIconCounter:					7;
+@entityIconDamageMarker:			8;
+@entityIconDelay:					9;
+@entityIconForceMarker:				10;
+@entityIconGlobalFlagTrigger:		11;
+@entityIconInventoryMarker:			12;
+@entityIconJumpMarker:				13;
+@entityIconLatch:					14;
+@entityIconLightStateTrigger:		15;
+@entityIconMapTransitionTrigger:	16;
+@entityIconMoveMarker:				17;
+@entityIconNandGate:				18;
+@entityIconOrGate:					19;
+@entityIconParticleEmitterTrigger:	20;
+@entityIconPowerupMarker:			21;
+@entityIconSoundTrigger:			22;
+@entityIconMusicTrigger:			23;
+@entityIconTimer:					24;
+@entityIconUseMarker:				25;
+@entityIconPointLight:				26;
+@entityIconSpotLight:				27;
+@entityIconAmbientLight:			28;
+@entityIconPlayerStart:				29;
+
+.entityIcon(@icon, @x: 0px, @y: 0px) {
+	background-image: url(../images/editor/entity_icons.png);
+	background-repeat: no-repeat;
+	background-position: @x -(@entityIconHeight * @icon) + @y;
+}

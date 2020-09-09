@@ -1,0 +1,127 @@
+{
+	"name": "Test Map #2",
+	"size": [20, 20],
+	"playerStartingPosition": [50, -60],
+	"persistent": false,
+	"tiles": [
+		0,4,[2,1],[12,0],[2,7],[2,0],[2,4],0,1,[12,0],[2,7],0,2,[2,4],0,1,[15,0],2,4,[2,0],
+		1,[15,0],2,4,[2,0],[8,1],[8,0],2,4,[4,0],[4,1],[10,0],2,4,[18,0],2,4,[16,0],1,0,
+		2,4,[8,0],[9,1],0,2,4,[6,0],2,[5,0],4,[5,0],2,[13,0],4,[5,0],2,[2,0],1,0,1,0,2,
+		[6,0],4,[3,0],1,0,1,[13,0],4,1,[4,0],1,4,[6,0],1,[5,0],4,[5,0],1,4,[2,1],[5,0],1,[3,0],
+		[2,2],[5,0],1,4,[10,0],[3,1],[5,0],1,4,[2,0],[4,2],[9,0],1,2,0,1,4,[8,0],1,[6,0],1,0,2,
+		1,[6,0],1,[2,0],1,[6,0],1,[2,0],1,[2,6],[2,5],[7,1],[4,1],[5,1]
+	],
+	"background": {
+		"colour": "rgba(155, 197, 255, 0.9)",
+		"offset": [0, 0],
+		"backgroundImageId": "background1",
+		"repeatX": true,
+		"repeatY": true,
+		"parallax": [0.5, 0.5]
+	},
+	"actors": [
+		{
+			"type": "barrel",
+			"id": "crate1",
+			"position": [290, -40]
+		}
+	],
+	"entities": [
+		{
+			"type": "collision",
+			"id": "collision1",
+			"position": [100, 200],
+			"size": [60, 60],
+			"filterType": "player"
+		},
+		{
+			"type": "maptransition",
+			"id": "maptransition1",
+			"position": [150, 170],
+			"mapId": "test1",
+			"targetId": "",
+			"inputs": [
+				"collision1"
+			]
+		},
+		{
+			"type": "use",
+			"id": "use1",
+			"position": [190, 130],
+			"size": [20, 30]
+		},
+		{
+			"type": "maptransition",
+			"id": "maptransition2",
+			"position": [190, 110],
+			"mapId": "test2",
+			"targetId": "use2",
+			"inputs": [
+				"use1"
+			]
+		},
+		{
+			"type": "use",
+			"id": "use2",
+			"position": [340, 110],
+			"size": [20, 30]
+		},
+		{
+			"type": "maptransition",
+			"id": "maptransition3",
+			"position": [340, 90],
+			"mapId": "test2",
+			"targetId": "use1",
+			"inputs": [
+				"use2"
+			]
+		},
+		{
+			"type": "use",
+			"id": "use3",
+			"position": [70, -30],
+			"size": [20, 20]
+		},
+		{
+			"type": "latch",
+			"id": "damage1latch",
+			"position": [110, -30],
+			"toggle": true,
+			"inputs": [
+				"use3"
+			]
+		},
+		{
+			"type": "damage",
+			"id": "damage1",
+			"position": [130, 40],
+			"size": [40, 40],
+			"amount": 1,
+			"kill": false,
+			"inputs": [
+				"damage1latch"
+			]
+		},
+		{
+			"type": "caption",
+			"id": "caption1",
+			"position": [170, 40],
+			"message": "I got a bad feeling about this...",
+			"actorId": "player",
+			"inputs": [
+				"damage1latch"
+			]
+		}
+	],
+	"lights": [
+		{
+			"type": "ambient",
+			"id": "light1",
+			"direction": [0, 0],
+			"brightness": 1,
+			"colour": "white",
+			"castShadows": false,
+			"active": true
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+	"imagePath": "content/sprites/mapdoor.png",
+	"tileSize": [20, 35],
+	"actorOffset": [0, 0],
+	"animations": [
+		{
+			"name": "idle",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [0, 0]
+		},
+		{
+			"name": "active",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [0, 0]
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+	"imagePath": "content/sprites/switch.png",
+	"tileSize": [10, 10],
+	"actorOffset": [0, 0],
+	"animations": [
+		{
+			"name": "idle",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [0, 0]
+		},
+		{
+			"name": "active",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [1, 0]
+		}
+	]
+}

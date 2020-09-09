@@ -1,0 +1,27 @@
+{
+	"up": [38, 87],
+	"down": [40, 83],
+	"left": [37, 65],
+	"right": [39, 68],
+	"jump": [32],
+	"crouch": [16],
+	"attack": [17],
+	"fly": [16, 70],
+	"use": [13, 69],
+	"editor": {
+		"up": [38],
+		"down": [40],
+		"left": [37],
+		"right": [39],
+		"toolpanel": [67],
+		"selecttool": [83],
+		"deleteitem": [46],
+		"deselect": [68],
+		"cameratool": [77],
+		"pancamera": [32],
+		"tiletool": [84],
+		"cleartile": [16],
+		"sampletile": [73],
+		"connect": [75]
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"spritePath": "content/sprites/mapdoor_sprite.json",
+	"size": [20, 35],
+	"baseType": "decoration",
+	"name": "Map Door"
+}

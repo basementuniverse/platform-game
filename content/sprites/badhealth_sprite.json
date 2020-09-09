@@ -1,0 +1,15 @@
+{
+	"imagePath": "content/sprites/badhealth.png",
+	"tileSize": [15, 15],
+	"actorOffset": [0, 0],
+	"animations": [
+		{
+			"name": "idle",
+			"frames": 1,
+			"frameRate": 1,
+			"loop": false,
+			"directions": false,
+			"startOffset": [0, 0]
+		}
+	]
+}

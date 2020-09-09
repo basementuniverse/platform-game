@@ -1,0 +1,7 @@
+{
+	"spritePath": "content/sprites/placeholder_sprite.json",
+	"size": [12, 14],
+	"baseType": "waterbreathing",
+	"name": "Rebreather",
+	"time": 20
+}

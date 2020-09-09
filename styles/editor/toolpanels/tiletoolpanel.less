@@ -1,0 +1,99 @@
+.toolpanelcontent.tiletypes {
+	@tileTypeButtonSize:	30px;
+	
+	.tiletypebuttons {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	
+	a.tiletypebutton {
+		position: relative;
+		display: inline-block;
+		margin: 5px;
+		border: 1px black solid;
+		height: @tileTypeButtonSize;
+		width: @tileTypeButtonSize;
+		background-image: url(../images/editor/transparent.png);
+		border-radius: @editorBorderRadius;
+		
+		.imagecontainer {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			
+			img {
+				position: absolute;
+				border: none;
+				image-rendering: optimizeSpeed;
+				image-rendering: -moz-crisp-edges;
+				image-rendering: -webkit-optimize-contrast;
+				image-rendering: -o-crisp-edges; 
+				image-rendering: optimize-contrast;
+				-ms-interpolation-mode: nearest-neighbor;
+			}
+		}
+		
+		.selectindicator {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			border-radius: @editorBorderRadius;
+			opacity: 0;
+			.transition(opacity);
+		}
+		
+		.editindicator {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			border-radius: @editorBorderRadius;
+			background-color: @toolpanelBg;
+			opacity: 0;
+			.transition(opacity);
+			.icon(@iconRightArrow);
+		}
+	}
+	
+	a.tiletypebutton:hover .selectindicator {
+		opacity: 0.5;
+	}
+	
+	a.tiletypebutton.selected {
+		margin: 2px;
+		border: 4px black solid;
+	}
+	
+	a.tiletypebutton.selected:hover .selectindicator {
+		opacity: 0;
+	}
+	
+	a.tiletypebutton.selected:hover .editindicator {
+		opacity: 0.8;
+	}
+	
+	a.tiletypebutton.addtiletypebutton {
+		width: @tileTypeButtonSize + 2px;
+		height: @tileTypeButtonSize + 2px;
+		background-color: @editorBg;
+		border: none;
+		.icon(@iconAdd, 1px, 1px);
+		.transition(background-color);
+	}
+	
+	a.tiletypebutton.addtiletypebutton:hover {
+		background-color: @buttonHoverColour;
+	}
+}

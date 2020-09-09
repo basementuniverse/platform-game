@@ -1,0 +1,7 @@
+{
+	"spritePath": "content/sprites/superhealth_sprite.json",
+	"size": [15, 15],
+	"baseType": "superhealth",
+	"name": "Super Health",
+	"amount": 1
+}

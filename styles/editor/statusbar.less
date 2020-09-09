@@ -1,0 +1,48 @@
+@statusbarHeight:		30px;
+
+.statusbar {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: @statusbarHeight;
+	padding: 0px 10px;
+	background-color: @editorBg;
+	z-index: 3;
+	
+	#statustext {
+		display: inline-block;
+		position: absolute;
+		cursor: pointer;
+		left: 50px;
+		right: 50px;
+		height: @statusbarHeight - 10px;
+		padding: 5px 0px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+	.cameraposition {
+		display: none;
+		position: absolute;
+		left: 50px;
+		height: @statusbarHeight;
+		
+		.camerapositioninputs {
+			display: inline-block;
+			float: left;
+			position: relative;
+			top: 5px;
+			margin-right: 10px;
+			
+			input[type=text] {
+				font-weight: normal;
+				width: 40px;
+				height: 16px;
+				padding: 2px;
+				margin: 0px;
+			}
+		}
+	}
+}

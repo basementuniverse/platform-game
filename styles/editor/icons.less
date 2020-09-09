@@ -1,0 +1,37 @@
+@iconHeight:			30px;
+
+@iconSave:				0;
+@iconSaveDirty:			1;
+@iconSelect:			2;
+@iconMoveCamera:		3;
+@iconTile:				4;
+@iconTileSample:		5;
+@iconShowHide:			6;
+@iconToolPanelOn:		7;
+@iconToolPanelOff:		8;
+@iconUndo:				9;
+@iconRedo:				10;
+@iconTick:				11;
+@iconCross:				12;
+@iconAdd:				13;
+@iconTextureAtlas:		14;
+@iconBackground:		15;
+@iconProperties:		16;
+@iconWaterTile:			17;
+@iconLadderTile:		18;
+@iconSolidTile:			19;
+@iconTopEdgeTile:		20;
+@iconRightEdgeTile:		21;
+@iconBottomEdgeTile:	22;
+@iconLeftEdgeTile:		23;
+@iconOrigin:			24;
+@iconRightArrow:		25;
+@iconLeftArrow:			26;
+@iconCopy:				27;
+@iconEdit:				28;
+
+.icon(@icon, @x: 0px, @y: 0px) {
+	background-image: url(../images/editor/icons.png);
+	background-repeat: no-repeat;
+	background-position: @x -(@iconHeight * @icon) + @y;
+}

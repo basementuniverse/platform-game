@@ -1,0 +1,23 @@
+{
+	"spritePath": "content/sprites/player_sprite.json",
+	"name": "Player",
+	"size": [16, 24],
+	"crouchHeight": 16,
+	"speed": 50,
+	"maxSpeed": 150,
+	"jumpStrength": 6.5,
+	"health": 3,
+	"maxHealth": 3,
+	"maxSuperHealth": 5,
+	"projectileType": "player_projectile",
+	"rateOfFire": 0.1,
+	"autoRateOfFire": 0.1,
+	"autoFire": false,
+	"allowFlying": false,
+	"invisible": false,
+	"invulnerable": false,
+	"powerAttack": false,
+	"oxygen": 5,
+	"maxOxygen": 5,
+	"waterBreathing": false
+}

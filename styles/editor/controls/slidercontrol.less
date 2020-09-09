@@ -1,0 +1,47 @@
+@sliderWidth:				105px;
+@sliderBarColour:			rgb(130, 130, 130);
+@sliderBarHoverColour:		rgb(200, 200, 200);
+
+.slider {
+	position: relative;
+	display: inline-block;
+	padding: 5px;
+	width: @sliderWidth;
+	height: 20px;
+	margin-right: 20px;
+	background-color: @dialogButtonColour;
+	border-radius: @editorBorderRadius;
+	cursor: pointer;
+	
+	.bar {
+		background-color: @sliderBarColour;
+		height: 100%;
+		pointer-events : none;
+		border-radius: @editorBorderRadius;
+		.transition(background-color);
+	}
+}
+
+.slider:hover .bar {
+	background-color: @sliderBarHoverColour;
+}
+
+.slider .center {
+	position: absolute;
+	top: 0px;
+	left: @sliderWidth / 2 + 5px;
+	height: 100%;
+	width: 1px;
+	border-left: 1px rgba(255, 255, 255, 0.5) dotted;
+	pointer-events : none;
+}
+
+.slider.negative {
+	.bar {
+		border-radius: 0px @editorBorderRadius @editorBorderRadius 0px;
+	}
+	
+	.bar.negative {
+		border-radius: @editorBorderRadius 0px 0px @editorBorderRadius;
+	}
+}

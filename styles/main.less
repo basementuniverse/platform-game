@@ -1,0 +1,149 @@
+@import "loading";
+@import "editor/editor";
+
+@bg:						black;
+@fg:						white;
+@fontFace:					"Open Sans", sans-serif;
+@font:						10pt @fontFace;
+@transitionTime:			0.2s;
+@scrollbar:					rgba(255, 255, 255, 0.4);
+@scrollbarHover:			rgba(255, 255, 255, 0.8);
+
+@font-face {
+	font-family: 'a04b_03';
+	src: url(../fonts/04b_03.ttf);
+}
+
+div.loadfont {
+	position: absolute;
+	top: -100px;
+	left: -100px;
+	opacity: 0;
+	font-family: a04b_03;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	overflow: hidden;
+	background-color: @bg;
+	color: @fg;
+	font: @font;
+}
+
+canvas#main {
+	width: 100%;
+	height: 100%;
+	image-rendering: optimizeSpeed;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: -o-crisp-edges; 
+	image-rendering: optimize-contrast;
+	-ms-interpolation-mode: nearest-neighbor;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: @scrollbar;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: @scrollbarHover;
+}
+
+::-webkit-scrollbar-button {
+	background-color: @bg;
+	height: 0px;
+	width: 0px;
+}
+
+::-webkit-scrollbar-corner {
+	background-color: @bg;
+}
+
+.attachedToScreen {
+	position: fixed;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+.user-select(@v) {
+	-moz-user-select: @v;
+	-o-user-select: @v;
+	-webkit-user-select: @v;
+	-ms-user-select: @v;
+	user-select: @v;
+}
+
+.transition(@properties, @time: @transitionTime, @timing: ease-in-out) {
+	-moz-transition: @properties @time @timing;
+	-o-transition: @properties @time @timing;
+	-webkit-transition: @properties @time @timing;
+	-ms-transition: @properties @time @timing;
+	transition: @properties @time @timing;
+}
+
+.fadein(@time: @transitionTime, @timing: ease-in-out) {
+	visibility: hidden;
+	opacity: 0;
+	-moz-transition: visibility 0s @time, opacity @time @timing;
+	-o-transition: visibility 0s @time, opacity @time @timing;
+	-webkit-transition: visibility 0s @time, opacity @time @timing;
+	-ms-transition: visibility 0s @time, opacity @time @timing;
+	transition: visibility 0s @time, opacity @time @timing;
+}
+
+.fadeout(@time: @transitionTime, @timing: ease-in-out) {
+	visibility: visible;
+	opacity: 1;
+	-moz-transition: opacity @time @timing;
+	-o-transition: opacity @time @timing;
+	-webkit-transition: opacity @time @timing;
+	-ms-transition: opacity @time @timing;
+	transition: opacity @time @timing;
+}
+
+.fadeinZIndex() {
+	z-index: 5;
+	-moz-transition: z-index 0s @transitionTime ease-in-out;
+	-o-transition: z-index 0s @transitionTime ease-in-out;
+	-webkit-transition: z-index 0s @transitionTime ease-in-out;
+	-ms-transition: z-index 0s @transitionTime ease-in-out;
+	transition: z-index 0s @transitionTime ease-in-out;
+}
+
+.fadeoutZIndex() {
+	z-index: 10;
+	-moz-transition: z-index @transitionTime ease-in-out;
+	-o-transition: z-index @transitionTime ease-in-out;
+	-webkit-transition: z-index @transitionTime ease-in-out;
+	-ms-transition: z-index @transitionTime ease-in-out;
+	transition: z-index @transitionTime ease-in-out;
+}
+
+.clearTransform() {
+	-moz-transform: none !important;
+	-o-transform: none !important;
+	-webkit-transform: none !important;
+	-ms-transform: none !important;
+	transform: none !important;
+}
